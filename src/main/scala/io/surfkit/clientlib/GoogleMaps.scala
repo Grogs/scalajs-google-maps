@@ -1,3 +1,4 @@
+package google.maps
 
 import scala.scalajs.js
 import js.annotation._
@@ -6,9 +7,6 @@ import org.scalajs.dom._
 import scala.scalajs.js.Date
 
 
-package google {
-
-package maps {
 
 import google.maps.Data.Geometry
 
@@ -111,6 +109,7 @@ class Map protected() extends MVCObject {
   var overlayMapTypes: MVCArray = js.native
 }
 
+
 @js.native
 trait MapOptions extends js.Object {
   var backgroundColor: String = js.native
@@ -153,82 +152,82 @@ trait MapOptions extends js.Object {
 
 object MapOptions {
   def apply(
-        backgroundColor: String = null,
-        center: LatLng,
-        disableDefaultUI: Boolean = false,
-        disableDoubleClickZoom: Boolean = false,
-        draggable: Boolean = true,
-        draggableCursor: String = null,
-        draggingCursor: String = null,
-        //heading: Double = 0.0,
-        keyboardShortcuts: Boolean = true,
-        mapMaker: Boolean = false,
-        mapTypeControl: Boolean = true,
-        mapTypeControlOptions: MapTypeControlOptions = null,
-        navigationControl: Boolean = true,
-        navigationControlOptions: NavigationControlOptions = null,
-        mapTypeId: MapTypeId = MapTypeId.ROADMAP,
-        //maxZoom: Double = null,
-        //minZoom: Double = null,
-        noClear: Boolean = true,
-        overviewMapControl: Boolean = true,
-        overviewMapControlOptions: OverviewMapControlOptions = null,
-        panControl: Boolean = true,
-        panControlOptions: PanControlOptions = null,
-        rotateControl: Boolean = false,
-        rotateControlOptions: RotateControlOptions = null,
-        scaleControl: Boolean = true,
-        scaleControlOptions: ScaleControlOptions = null,
-        scrollwheel: Boolean = true,
-        streetView: StreetViewPanorama = null,
-        streetViewControl: Boolean = true,
-        streetViewControlOptions: StreetViewControlOptions = null,
-        styles: js.Array[MapTypeStyle] = null,
-        //tilt: Double = null,
-        zoom: Double,
-        zoomControl: Boolean = true,
-        zoomControlOptions: ZoomControlOptions = null
-             ): MapOptions = {
+             backgroundColor: String = null,
+             center: LatLng,
+             disableDefaultUI: Boolean = false,
+             disableDoubleClickZoom: Boolean = false,
+             draggable: Boolean = true,
+             draggableCursor: String = null,
+             draggingCursor: String = null,
+             //heading: Double = 0.0,
+             keyboardShortcuts: Boolean = true,
+             mapMaker: Boolean = false,
+             mapTypeControl: Boolean = true,
+             mapTypeControlOptions: MapTypeControlOptions = null,
+             navigationControl: Boolean = true,
+             navigationControlOptions: NavigationControlOptions = null,
+             mapTypeId: MapTypeId = MapTypeId.ROADMAP,
+             //maxZoom: Double = null,
+             //minZoom: Double = null,
+             noClear: Boolean = true,
+             overviewMapControl: Boolean = true,
+             overviewMapControlOptions: OverviewMapControlOptions = null,
+             panControl: Boolean = true,
+             panControlOptions: PanControlOptions = null,
+             rotateControl: Boolean = false,
+             rotateControlOptions: RotateControlOptions = null,
+             scaleControl: Boolean = true,
+             scaleControlOptions: ScaleControlOptions = null,
+             scrollwheel: Boolean = true,
+             streetView: StreetViewPanorama = null,
+             streetViewControl: Boolean = true,
+             streetViewControlOptions: StreetViewControlOptions = null,
+             styles: js.Array[MapTypeStyle] = null,
+             //tilt: Double = null,
+             zoom: Double,
+             zoomControl: Boolean = true,
+             zoomControlOptions: ZoomControlOptions = null
+           ): MapOptions = {
     js.Dynamic.literal(
-        backgroundColor = backgroundColor,
-        center = center,
+      backgroundColor = backgroundColor,
+      center = center,
 
-        disableDefaultUI= disableDefaultUI,
-        disableDoubleClickZoom = disableDoubleClickZoom,
-        draggable = draggable,
-        draggableCursor= draggableCursor,
-        draggingCursor= draggingCursor,
+      disableDefaultUI= disableDefaultUI,
+      disableDoubleClickZoom = disableDoubleClickZoom,
+      draggable = draggable,
+      draggableCursor= draggableCursor,
+      draggingCursor= draggingCursor,
       //  heading = heading,
 
-          keyboardShortcuts=keyboardShortcuts,
-          mapMaker=mapMaker,
-          mapTypeControl=mapTypeControl,
-          mapTypeControlOptions=mapTypeControlOptions,
-          navigationControl=navigationControl,
-          navigationControlOptions=navigationControlOptions,
-          mapTypeId=mapTypeId,
+      keyboardShortcuts=keyboardShortcuts,
+      mapMaker=mapMaker,
+      mapTypeControl=mapTypeControl,
+      mapTypeControlOptions=mapTypeControlOptions,
+      navigationControl=navigationControl,
+      navigationControlOptions=navigationControlOptions,
+      mapTypeId=mapTypeId,
 
-          //  maxZoom=maxZoom,
-          //  minZoom=minZoom,
-            noClear=noClear,
-            overviewMapControl=overviewMapControl,
-            overviewMapControlOptions=overviewMapControlOptions,
-            panControl=panControl,
-            panControlOptions=panControlOptions,
-            rotateControl=rotateControl,
-            rotateControlOptions=rotateControlOptions,
-            scaleControl=scaleControl,
-            scaleControlOptions=scaleControlOptions,
-            scrollwheel=scrollwheel,
-            streetView=streetView,
-            streetViewControl=streetViewControl,
-            streetViewControlOptions=streetViewControlOptions,
-            styles=styles,
-          //  tilt=tilt,
+      //  maxZoom=maxZoom,
+      //  minZoom=minZoom,
+      noClear=noClear,
+      overviewMapControl=overviewMapControl,
+      overviewMapControlOptions=overviewMapControlOptions,
+      panControl=panControl,
+      panControlOptions=panControlOptions,
+      rotateControl=rotateControl,
+      rotateControlOptions=rotateControlOptions,
+      scaleControl=scaleControl,
+      scaleControlOptions=scaleControlOptions,
+      scrollwheel=scrollwheel,
+      streetView=streetView,
+      streetViewControl=streetViewControl,
+      streetViewControlOptions=streetViewControlOptions,
+      styles=styles,
+      //  tilt=tilt,
 
-        zoom=zoom,
-        zoomControl=zoomControl,
-        zoomControlOptions=zoomControlOptions
+      zoom=zoom,
+      zoomControl=zoomControl,
+      zoomControlOptions=zoomControlOptions
     ).asInstanceOf[MapOptions]
   }
 }
@@ -413,10 +412,11 @@ class Data protected() extends MVCObject {
 }
 
 object Data {
+
   @js.native
-trait DataOptions extends js.Object {
-  var map: Map = js.native
-}
+  trait DataOptions extends js.Object {
+    var map: Map = js.native
+  }
 
   object DataOptions{
     def apply(gmap:Map) ={
@@ -427,25 +427,25 @@ trait DataOptions extends js.Object {
   }
 
   @js.native
-trait GeoJsonOptions extends js.Object {
-  var idPropertyName: String = js.native
-}
+  trait GeoJsonOptions extends js.Object {
+    var idPropertyName: String = js.native
+  }
 
   @js.native
-trait StyleOptions extends js.Object {
-  var clickable: Boolean = js.native
-  var cursor: String = js.native
-  var fillColor: String = js.native
-  var fillOpacity: Double = js.native
-  var icon: js.Any = js.native
-  var shape: MarkerShape = js.native
-  var strokeColor: String = js.native
-  var strokeOpacity: Double = js.native
-  var strokeWeight: Double = js.native
-  var title: String = js.native
-  var visible: Boolean = js.native
-  var zIndex: Double = js.native
-}
+  trait StyleOptions extends js.Object {
+    var clickable: Boolean = js.native
+    var cursor: String = js.native
+    var fillColor: String = js.native
+    var fillOpacity: Double = js.native
+    var icon: js.Any = js.native
+    var shape: MarkerShape = js.native
+    var strokeColor: String = js.native
+    var strokeOpacity: Double = js.native
+    var strokeWeight: Double = js.native
+    var title: String = js.native
+    var visible: Boolean = js.native
+    var zIndex: Double = js.native
+  }
   object StyleOptions{
     def apply(
                clickable:Boolean = true,
@@ -460,7 +460,7 @@ trait StyleOptions extends js.Object {
                title: String = "",
                visible: Boolean = true,
                zIndex: Double = 1.0
-            ):StyleOptions ={
+             ):StyleOptions ={
       js.Dynamic.literal(
         clickable= clickable,
         cursor = cursor,
@@ -480,34 +480,34 @@ trait StyleOptions extends js.Object {
 
   type StylingFunction = (Data.Feature) => Data.StyleOptions
 
-@JSName("google.maps.Data.Feature")
-@js.native
+  @JSName("google.maps.Data.Feature")
+  @js.native
 class Feature protected() extends js.Object {
-  def this(options: Data.FeatureOptions = ???) = this()
+    def this(options: Data.FeatureOptions = ???) = this()
 
-  def forEachProperty(callback: js.Function2[js.Any, String, Unit]): Unit = js.native
+    def forEachProperty(callback: js.Function2[js.Any, String, Unit]): Unit = js.native
 
-  def getGeometry(): Data.Geometry = js.native
+    def getGeometry(): Data.Geometry = js.native
 
-  def getId(): String = js.native
+    def getId(): String = js.native
 
-  def getProperty(name: String): js.Dynamic = js.native
+    def getProperty(name: String): js.Dynamic = js.native
 
-  def removeProperty(name: String): Unit = js.native
+    def removeProperty(name: String): Unit = js.native
 
-  def setGeometry(newGeometry: Data.Geometry): Unit = js.native
+    def setGeometry(newGeometry: Data.Geometry): Unit = js.native
 
-  def setProperty(name: String, newValue: js.Any): Unit = js.native
+    def setProperty(name: String, newValue: js.Any): Unit = js.native
 
-  def toGeoJson(callback: js.Function1[Object, Unit]): Unit = js.native
-}
+    def toGeoJson(callback: js.Function1[Object, Unit]): Unit = js.native
+  }
 
   @js.native
-trait FeatureOptions extends js.Object {
-  var geometry: Data.Geometry = js.native
-  var id: String = js.native
-  var properties: Object = js.native
-}
+  trait FeatureOptions extends js.Object {
+    var geometry: Data.Geometry = js.native
+    var id: String = js.native
+    var properties: Object = js.native
+  }
 
   object FeatureOptions{
     def apply(geometry: Data.Geometry, id: String, properties:js.Any = null):FeatureOptions = {
@@ -519,138 +519,138 @@ trait FeatureOptions extends js.Object {
     }
   }
 
-@JSName("google.maps.Data.Geometry")
-@js.native
+  @JSName("google.maps.Data.Geometry")
+  @js.native
 class Geometry extends js.Object {
-  def getType(): String = js.native
-}
+    def getType(): String = js.native
+  }
 
-@JSName("google.maps.Data.Point")
-@js.native
-class Point protected() extends Data.Geometry {
-  def this(latLng: LatLng) = this()
+  @JSName("google.maps.Data.Point")
+  @js.native
+  class Point protected() extends Data.Geometry {
+    def this(latLng: LatLng) = this()
 
-  def get(): LatLng = js.native
-}
+    def get(): LatLng = js.native
+  }
 
-@JSName("google.maps.Data.MultiPoint")
-@js.native
-class MultiPoint protected() extends Data.Geometry {
-  def this(elements: js.Array[LatLng]) = this()
+  @JSName("google.maps.Data.MultiPoint")
+  @js.native
+  class MultiPoint protected() extends Data.Geometry {
+    def this(elements: js.Array[LatLng]) = this()
 
-  def getAt(n: Double): LatLng = js.native
+    def getAt(n: Double): LatLng = js.native
 
-  def getLength(): Double = js.native
-}
+    def getLength(): Double = js.native
+  }
 
-@JSName("google.maps.Data.LineString")
-@js.native
-class LineString protected() extends Data.Geometry {
-  def this(elements: js.Array[LatLng]) = this()
+  @JSName("google.maps.Data.LineString")
+  @js.native
+  class LineString protected() extends Data.Geometry {
+    def this(elements: js.Array[LatLng]) = this()
 
-  def getArray(): js.Array[LatLng] = js.native
+    def getArray(): js.Array[LatLng] = js.native
 
-  def getAt(n: Double): LatLng = js.native
+    def getAt(n: Double): LatLng = js.native
 
-  def getLength(): Double = js.native
-}
+    def getLength(): Double = js.native
+  }
 
-@JSName("google.maps.Data.MultiLineString")
-@js.native
-class MultiLineString protected() extends Data.Geometry {
-  def this(elements: js.Array[Data.LineString]) = this()
+  @JSName("google.maps.Data.MultiLineString")
+  @js.native
+  class MultiLineString protected() extends Data.Geometry {
+    def this(elements: js.Array[Data.LineString]) = this()
 
-  def getArray(): js.Array[Data.LineString] = js.native
+    def getArray(): js.Array[Data.LineString] = js.native
 
-  def getAt(n: Double): Data.LineString = js.native
+    def getAt(n: Double): Data.LineString = js.native
 
-  def getLength(): Double = js.native
-}
+    def getLength(): Double = js.native
+  }
 
-@JSName("google.maps.Data.LinearRing")
-@js.native
-class LinearRing protected() extends Data.Geometry {
-  def this(elements: js.Array[LatLng]) = this()
+  @JSName("google.maps.Data.LinearRing")
+  @js.native
+  class LinearRing protected() extends Data.Geometry {
+    def this(elements: js.Array[LatLng]) = this()
 
-  def getArray(): js.Array[LatLng] = js.native
+    def getArray(): js.Array[LatLng] = js.native
 
-  def getAt(n: Double): LatLng = js.native
+    def getAt(n: Double): LatLng = js.native
 
-  def getLength(): Double = js.native
-}
+    def getLength(): Double = js.native
+  }
 
-@JSName("google.maps.Data.Polygon")
-@js.native
-class Polygon protected() extends Data.Geometry {
-  def this(elements: js.Array[LinearRing]) = this()
+  @JSName("google.maps.Data.Polygon")
+  @js.native
+  class Polygon protected() extends Data.Geometry {
+    def this(elements: js.Array[LinearRing]) = this()
 
-  def getArray(): js.Array[LinearRing] = js.native
+    def getArray(): js.Array[LinearRing] = js.native
 
-  def getAt(n: Double): LinearRing = js.native
+    def getAt(n: Double): LinearRing = js.native
 
-  def getLength(): Double = js.native
-}
+    def getLength(): Double = js.native
+  }
 
-@JSName("google.maps.Data.MultiPolygon")
-@js.native
-class MultiPolygon protected() extends Data.Geometry {
-  def this(elements: js.Array[Data.Polygon]) = this()
+  @JSName("google.maps.Data.MultiPolygon")
+  @js.native
+  class MultiPolygon protected() extends Data.Geometry {
+    def this(elements: js.Array[Data.Polygon]) = this()
 
-  def getArray(): js.Array[Data.Polygon] = js.native
+    def getArray(): js.Array[Data.Polygon] = js.native
 
-  def getAt(n: Double): Data.Polygon = js.native
+    def getAt(n: Double): Data.Polygon = js.native
 
-  def getLength(): Double = js.native
-}
+    def getLength(): Double = js.native
+  }
 
-@JSName("google.maps.Data.GeometryCollection")
-@js.native
-class GeometryCollection protected() extends Data.Geometry {
-  def this(elements: js.Array[Data.Geometry]) = this()
+  @JSName("google.maps.Data.GeometryCollection")
+  @js.native
+  class GeometryCollection protected() extends Data.Geometry {
+    def this(elements: js.Array[Data.Geometry]) = this()
 
-  def getArray(): js.Array[Data.Geometry] = js.native
+    def getArray(): js.Array[Data.Geometry] = js.native
 
-  def getAt(n: Double): Data.Geometry = js.native
+    def getAt(n: Double): Data.Geometry = js.native
 
-  def getLength(): Double = js.native
-}
+    def getLength(): Double = js.native
+  }
 
-@js.native
-trait MouseEvent extends google.maps.MouseEvent {
-  var feature: Data.Feature = js.native
-}
+  @js.native
+  trait MouseEvent extends google.maps.MouseEvent {
+    var feature: Data.Feature = js.native
+  }
 
-@js.native
-trait AddFeatureEvent extends js.Object {
-  var feature: Data.Feature = js.native
-}
+  @js.native
+  trait AddFeatureEvent extends js.Object {
+    var feature: Data.Feature = js.native
+  }
 
-@js.native
-trait RemoveFeatureEvent extends js.Object {
-  var feature: Data.Feature = js.native
-}
+  @js.native
+  trait RemoveFeatureEvent extends js.Object {
+    var feature: Data.Feature = js.native
+  }
 
-@js.native
-trait SetGeometryEvent extends js.Object {
-  var feature: Data.Feature = js.native
-  var newGeometry: Data.Geometry = js.native
-  var oldGeometry: Data.Geometry = js.native
-}
+  @js.native
+  trait SetGeometryEvent extends js.Object {
+    var feature: Data.Feature = js.native
+    var newGeometry: Data.Geometry = js.native
+    var oldGeometry: Data.Geometry = js.native
+  }
 
-@js.native
-trait SetPropertyEvent extends js.Object {
-  var feature: Data.Feature = js.native
-  var name: String = js.native
-  var newValue: js.Any = js.native
-  var oldValue: js.Any = js.native
-}
+  @js.native
+  trait SetPropertyEvent extends js.Object {
+    var feature: Data.Feature = js.native
+    var name: String = js.native
+    var newValue: js.Any = js.native
+    var oldValue: js.Any = js.native
+  }
 
-@js.native
-trait RemovePropertyEvent extends js.Object {
-  var feature: Data.Feature = js.native
-  var name: String = js.native
-  var oldValue: js.Any = js.native
-}
+  @js.native
+  trait RemovePropertyEvent extends js.Object {
+    var feature: Data.Feature = js.native
+    var name: String = js.native
+    var oldValue: js.Any = js.native
+  }
 
 }
 
@@ -739,68 +739,54 @@ trait MarkerOptions extends js.Object {
   var zIndex: Double = js.native
 }
 
-  object MarkerOptions{
-    def apply(
-      animation: js.UndefOr[Animation] = js.undefined,
-      clickable: js.UndefOr[Boolean] = js.undefined,
-      cursor: js.UndefOr[String] = js.undefined,
-      draggable: js.UndefOr[Boolean] = js.undefined,
-      flat: js.UndefOr[Boolean] = js.undefined,
-      icon: js.UndefOr[js.Any] = js.undefined,
-      map: Map,
-      optimized: js.UndefOr[Boolean] = js.undefined,
-      position: LatLng,
-      raiseOnDrag: js.UndefOr[Boolean] = js.undefined,
-      shadow: js.UndefOr[js.Any] = js.undefined,
-      shape: js.UndefOr[MarkerShape ] = js.undefined,
-      title: js.UndefOr[String] = js.undefined,
-      visible: js.UndefOr[Boolean] = js.undefined,
-      zIndex: js.UndefOr[Double] = js.undefined
-               ):MarkerOptions ={
-      val result = js.Dynamic.literal()
-      clickable.foreach(result.clickable = _)
-      cursor.foreach(result.cursor = _)
-      draggable.foreach(result.draggable = _)
-      flat.foreach(result.flat = _)
-      icon.foreach(result.icon = _)
-      result.map = map
-      optimized.foreach(result.optimized = _)
-      optimized.foreach(result.optimized = _)
-      result.position = position
-      raiseOnDrag.foreach(result.raiseOnDrag = _)
-      shadow.foreach(result.shadow = _)
-      shape.foreach(result.shape = _)
-      title.foreach(result.title = _)
-      visible.foreach(result.visible = _)
-      zIndex.foreach(result.zIndex = _)
-      result.asInstanceOf[MarkerOptions]
-    }
+object MarkerOptions{
+  def apply(
+             animation: Animation = null,
+             clickable: Boolean = true,
+             cursor: String = "",
+             draggable: Boolean = false,
+             flat: Boolean = true,
+             icon: js.Any = null,
+             map: js.Any = null,
+             optimized: Boolean = true,
+             position: LatLng = null,
+             raiseOnDrag: Boolean = true,
+             shadow: js.Any = null,
+             shape: MarkerShape = null,
+             title: String = "",
+             visible: Boolean = true,
+             zIndex: Double = 1.0
+           ):MarkerOptions ={
+    js.Dynamic.literal(
+      animation = animation,
+      clickable = clickable,
+      cursor = cursor,
+      draggable = draggable,
+      flat = flat,
+      icon = icon,
+      map = map,
+      optimized = optimized,
+      position = position,
+      raiseOnDrag = raiseOnDrag,
+      shadow = shadow,
+      shape = shape,
+      title = title,
+      visible = visible,
+      zIndex = zIndex
+    ).asInstanceOf[MarkerOptions]
   }
+}
 
+@JSName("google.maps.MarkerImage")
 @js.native
-trait MarkerImage extends js.Object {
+class MarkerImage protected() extends js.Object {
+  def this(url: String, size: Size = ???, origin: Point = ???, anchor: Point = ???, scaledSize: Size = ???) = this()
+
   var anchor: Point = js.native
   var origin: Point = js.native
   var scaledSize: Size = js.native
   var size: Size = js.native
   var url: String = js.native
-}
-
-object MarkerImage{
-  def apply(
-      anchor: js.UndefOr[Point] = js.undefined,
-      origin: js.UndefOr[Point] = js.undefined,
-      scaledSize: js.UndefOr[Size] = js.undefined,
-      size: Size,
-      url: String):MarkerImage = {
-    val result = js.Dynamic.literal()
-    result.size = size
-    result.url = url
-    anchor.foreach(result.anchor = _)
-    origin.foreach(result.origin = _)
-    scaledSize.foreach(result.scaledSize = _)
-    result.asInstanceOf[MarkerImage]
-  }
 }
 
 @js.native
@@ -809,14 +795,15 @@ trait MarkerShape extends js.Object {
   var `type`: String = js.native
 }
 
-  object MarkerShape{
-    def apply(coords:js.Array[Double], shape:String = ""):MarkerShape = {
-      js.Dynamic.literal(
-        coords = coords,
-        `type` = shape
-      ).asInstanceOf[MarkerShape]
-    }
+object MarkerShape{
+  def apply(coords:js.Array[Double], shape:String = ""):MarkerShape = {
+    js.Dynamic.literal(
+      coords = coords,
+      `type` = shape
+    ).asInstanceOf[MarkerShape]
   }
+}
+
 @js.native
 trait Symbol extends js.Object {
   var anchor: Point = js.native
@@ -829,6 +816,7 @@ trait Symbol extends js.Object {
   var strokeOpacity: Double = js.native
   var strokeWeight: Double = js.native
 }
+
 @js.native
 sealed trait SymbolPath extends js.Object {
 }
@@ -894,24 +882,24 @@ trait InfoWindowOptions extends js.Object {
   var zIndex: Double = js.native
 }
 
-  object InfoWindowOptions{
-    def apply(
-               content: String = "<div>Hello World!</div>",
-               disableAutoPan:Boolean = false,
-               maxWidth:Double = Double.MaxValue,
-               pixelOffset:Size = null,
-               position:LatLng = null,
-               zIndex:Double = 1.0):InfoWindowOptions ={
-      js.Dynamic.literal(
-        content =content,
-        disableAutoPan = disableAutoPan,
-        maxWidth = maxWidth,
-        pixelOffset = pixelOffset,
-        position = position,
-        zIndex = zIndex
-      ).asInstanceOf[InfoWindowOptions]
-    }
+object InfoWindowOptions{
+  def apply(
+             content: String = "<div>Hello World!</div>",
+             disableAutoPan:Boolean = false,
+             maxWidth:Double = Double.MaxValue,
+             pixelOffset:Size = null,
+             position:LatLng = null,
+             zIndex:Double = 1.0):InfoWindowOptions ={
+    js.Dynamic.literal(
+      content =content,
+      disableAutoPan = disableAutoPan,
+      maxWidth = maxWidth,
+      pixelOffset = pixelOffset,
+      position = position,
+      zIndex = zIndex
+    ).asInstanceOf[InfoWindowOptions]
   }
+}
 
 @JSName("google.maps.Polyline")
 @js.native
@@ -957,37 +945,37 @@ trait PolylineOptions extends js.Object {
   var zIndex: Double = js.native
 }
 
-  object PolylineOptions{
-    def apply(
-      clickable: Boolean = false,
-      draggable: Boolean = false,
-      editable: Boolean = false,
-      geodesic: Boolean = false,
-      icons: js.Array[IconSequence] = null,
-      map: Map = null,
-      path: js.Array[js.Any] = null,
-      strokeColor: String = "",
-      strokeOpacity: Double = 1.0,
-      strokeWeight: Double = 1.0,
-      visible: Boolean = true,
-      zIndex: Double = 1.0
-               ):PolylineOptions = {
-      js.Dynamic.literal(
-        clickable = clickable,
-        draggable =draggable,
-        editable= editable,
-        geodesic = geodesic,
-        icons = icons,
-        map = map,
-        path = path,
-        strokeColor = strokeColor,
-        strokeOpacity = strokeOpacity,
-        strokeWeight = strokeWeight,
-        visible = visible,
-        zIndex = zIndex
-      ).asInstanceOf[PolylineOptions]
-    }
+object PolylineOptions{
+  def apply(
+             clickable: Boolean = false,
+             draggable: Boolean = false,
+             editable: Boolean = false,
+             geodesic: Boolean = false,
+             icons: js.Array[IconSequence] = null,
+             map: Map = null,
+             path: js.Array[js.Any] = null,
+             strokeColor: String = "",
+             strokeOpacity: Double = 1.0,
+             strokeWeight: Double = 1.0,
+             visible: Boolean = true,
+             zIndex: Double = 1.0
+           ):PolylineOptions = {
+    js.Dynamic.literal(
+      clickable = clickable,
+      draggable =draggable,
+      editable= editable,
+      geodesic = geodesic,
+      icons = icons,
+      map = map,
+      path = path,
+      strokeColor = strokeColor,
+      strokeOpacity = strokeOpacity,
+      strokeWeight = strokeWeight,
+      visible = visible,
+      zIndex = zIndex
+    ).asInstanceOf[PolylineOptions]
   }
+}
 
 @js.native
 trait IconSequence extends js.Object {
@@ -1049,40 +1037,40 @@ trait PolygonOptions extends js.Object {
   var zIndex: Double = js.native
 }
 
-  object PolygonOptions{
-    def apply(
-        clickable: Boolean = false,
-        draggable: Boolean = false,
-        editable: Boolean = false,
-        fillColor: String = "",
-        fillOpacity: Double = 1.0,
-        geodesic: Boolean = false,
-        map: Map = null,
-        paths: js.Array[js.Any] = null,
-        strokeColor: String = "",
-        strokeOpacity: Double = 1.0,
-        strokePosition: StrokePosition = null,
-        strokeWeight: Double = 1.0,
-        visible: Boolean = true,
-        zIndex: Double = 1.0):PolygonOptions ={
-      js.Dynamic.literal(
-        clickable = clickable,
-        draggable = draggable,
-        editable = editable,
-        fillColor = fillColor,
-        fillOpacity = fillOpacity,
-        geodesic = geodesic,
-        map = map,
-        paths = paths,
-        strokeColor = strokeColor,
-        strokeOpacity = strokeOpacity,
-        strokePosition = strokePosition,
-        strokeWeight = strokeWeight,
-        visible = visible,
-        zIndex = zIndex
-      ).asInstanceOf[PolygonOptions]
-    }
+object PolygonOptions{
+  def apply(
+             clickable: Boolean = false,
+             draggable: Boolean = false,
+             editable: Boolean = false,
+             fillColor: String = "",
+             fillOpacity: Double = 1.0,
+             geodesic: Boolean = false,
+             map: Map = null,
+             paths: js.Array[js.Any] = null,
+             strokeColor: String = "",
+             strokeOpacity: Double = 1.0,
+             strokePosition: StrokePosition = null,
+             strokeWeight: Double = 1.0,
+             visible: Boolean = true,
+             zIndex: Double = 1.0):PolygonOptions ={
+    js.Dynamic.literal(
+      clickable = clickable,
+      draggable = draggable,
+      editable = editable,
+      fillColor = fillColor,
+      fillOpacity = fillOpacity,
+      geodesic = geodesic,
+      map = map,
+      paths = paths,
+      strokeColor = strokeColor,
+      strokeOpacity = strokeOpacity,
+      strokePosition = strokePosition,
+      strokeWeight = strokeWeight,
+      visible = visible,
+      zIndex = zIndex
+    ).asInstanceOf[PolygonOptions]
   }
+}
 
 @js.native
 trait PolyMouseEvent extends js.Object {
@@ -1136,41 +1124,41 @@ trait RectangleOptions extends js.Object {
   var zIndex: Double = js.native
 }
 
-  object RectangleOptions{
-    def apply(
-         bounds: LatLngBounds = null,
-         clickable: Boolean = false,
-         draggable: Boolean = false,
-         editable: Boolean = false,
-         fillColor: String = "",
-         fillOpacity: Double = 1.0,
-         map: Map = null,
-         paths: js.Array[js.Any] = null,
-         strokeColor: String = "",
-         strokeOpacity: Double = 1.0,
-         strokePosition: StrokePosition = null,
-         strokeWeight: Double = 1.0,
-         visible: Boolean = true,
-         zIndex: Double = 1.0
-               ):RectangleOptions = {
-      js.Dynamic.literal(
-        bounds = bounds,
-        clickable = clickable,
-        draggable = draggable,
-        editable = editable,
-        fillColor = fillColor,
-        fillOpacity = fillOpacity,
-        map = map,
-        paths = paths,
-        strokeColor = strokeColor,
-        strokeOpacity = strokeOpacity,
-        strokePosition = strokePosition,
-        strokeWeight = strokeWeight,
-        visible = visible,
-        zIndex = zIndex
-      ).asInstanceOf[RectangleOptions]
-    }
+object RectangleOptions{
+  def apply(
+             bounds: LatLngBounds = null,
+             clickable: Boolean = false,
+             draggable: Boolean = false,
+             editable: Boolean = false,
+             fillColor: String = "",
+             fillOpacity: Double = 1.0,
+             map: Map = null,
+             paths: js.Array[js.Any] = null,
+             strokeColor: String = "",
+             strokeOpacity: Double = 1.0,
+             strokePosition: StrokePosition = null,
+             strokeWeight: Double = 1.0,
+             visible: Boolean = true,
+             zIndex: Double = 1.0
+           ):RectangleOptions = {
+    js.Dynamic.literal(
+      bounds = bounds,
+      clickable = clickable,
+      draggable = draggable,
+      editable = editable,
+      fillColor = fillColor,
+      fillOpacity = fillOpacity,
+      map = map,
+      paths = paths,
+      strokeColor = strokeColor,
+      strokeOpacity = strokeOpacity,
+      strokePosition = strokePosition,
+      strokeWeight = strokeWeight,
+      visible = visible,
+      zIndex = zIndex
+    ).asInstanceOf[RectangleOptions]
   }
+}
 
 @JSName("google.maps.Circle")
 @js.native
@@ -1241,7 +1229,7 @@ object CircleOptions{
              strokeWeight: Double = 1.0,
              visible: Boolean = true,
              zIndex: Double = 1.0
-             ):CircleOptions = {
+           ):CircleOptions = {
     js.Dynamic.literal(
       center = center,
       clickable = clickable,
@@ -1260,6 +1248,7 @@ object CircleOptions{
     ).asInstanceOf[CircleOptions]
   }
 }
+
 
 @js.native
 sealed trait StrokePosition extends js.Object {
@@ -1308,7 +1297,7 @@ object GroundOverlayOptions{
              clickable: Boolean = false,
              map: Map = null,
              opacity: Double = 1.0
-             ):GroundOverlayOptions = {
+           ):GroundOverlayOptions = {
     js.Dynamic.literal(
       clickable = clickable,
       map = map,
@@ -1374,21 +1363,21 @@ trait GeocoderRequest extends js.Object {
   var region: String = js.native
 }
 
-  object GeocoderRequest{
-    def apply(
-      address: js.UndefOr[String] = js.undefined,
-      bounds: js.UndefOr[LatLngBounds] = js.undefined,
-      location: js.UndefOr[LatLng] = js.undefined,
-      region: js.UndefOr[String] = js.undefined
-               ):GeocoderRequest ={
-      val result = js.Dynamic.literal()
-      address.foreach(result.address = _)
-      bounds.foreach(result.bounds = _)
-      location.foreach(result.location = _)
-      region.foreach(result.region = _)
-      result.asInstanceOf[GeocoderRequest]
-    }
+object GeocoderRequest{
+  def apply(
+             address: String = "",
+             bounds: LatLngBounds = null,
+             location: LatLng = null,
+             region: String = ""
+           ):GeocoderRequest ={
+    js.Dynamic.literal(
+      address = address,
+      bounds = bounds,
+      location = location,
+      region = region
+    ).asInstanceOf[GeocoderRequest]
   }
+}
 
 @js.native
 sealed trait GeocoderStatus extends js.Object {
@@ -1493,38 +1482,37 @@ trait DirectionsRendererOptions extends js.Object {
 
 object DirectionsRendererOptions{
   def apply(
-        directions: js.UndefOr[DirectionsResult] = js.undefined,
-        draggable: js.UndefOr[Boolean] = js.undefined,
-        hideRouteList: js.UndefOr[Boolean] = js.undefined,
-        infoWindow: js.UndefOr[InfoWindow] = js.undefined,
-        map: Map,
-        markerOptions: js.UndefOr[MarkerOptions] = js.undefined,
-        panel: js.UndefOr[Element] = js.undefined,
-        polylineOptions: js.UndefOr[PolylineOptions] = js.undefined,
-        preserveViewport: js.UndefOr[Boolean] = js.undefined,
-        routeIndex: js.UndefOr[Double] = js.undefined,
-        suppressBicyclingLayer: js.UndefOr[Boolean] = js.undefined,
-        suppressInfoWindows: js.UndefOr[Boolean] = js.undefined,
-        suppressMarkers: js.UndefOr[Boolean] = js.undefined,
-        suppressPolylines: js.UndefOr[Boolean] = js.undefined
-             ):DirectionsRendererOptions = {
-    val result = js.Dynamic.literal()
-    result.map = map
-    directions.foreach(result.directions = _)
-    draggable.foreach(result.draggable = _)
-    hideRouteList.foreach(result.hideRouteList = _)
-    infoWindow.foreach(result.infoWindow = _)
-    markerOptions.foreach(result.markerOptions = _)
-    panel.foreach(result.panel = _)
-    polylineOptions.foreach(result.polylineOptions = _)
-    preserveViewport.foreach(result.preserveViewport = _)
-    routeIndex.foreach(result.routeIndex = _)
-    suppressBicyclingLayer.foreach(result.suppressBicyclingLayer = _)
-    suppressInfoWindows.foreach(result.suppressInfoWindows = _)
-    suppressMarkers.foreach(result.suppressMarkers = _)
-    suppressPolylines.foreach(result.suppressPolylines = _)
-    result.asInstanceOf[DirectionsRendererOptions]
-
+             directions: DirectionsResult = null,
+             draggable: Boolean = false,
+             hideRouteList: Boolean = false,
+             infoWindow: InfoWindow = null,
+             map: Map = null,
+             markerOptions: MarkerOptions = null,
+             panel: Element = null,
+             polylineOptions: PolylineOptions = null,
+             preserveViewport: Boolean = true,
+             routeIndex: Double = 0,
+             suppressBicyclingLayer: Boolean = true,
+             suppressInfoWindows: Boolean = false,
+             suppressMarkers: Boolean = false,
+             suppressPolylines: Boolean = false
+           ):DirectionsRendererOptions = {
+    js.Dynamic.literal(
+      directions = directions,
+      draggable = draggable,
+      hideRouteList = hideRouteList,
+      infoWindow = infoWindow,
+      map = map,
+      markerOptions = markerOptions,
+      panel = panel,
+      polylineOptions = polylineOptions,
+      preserveViewport = preserveViewport,
+      routeIndex =routeIndex,
+      suppressBicyclingLayer = suppressBicyclingLayer,
+      suppressInfoWindows = suppressInfoWindows,
+      suppressMarkers = suppressMarkers,
+      suppressPolylines = suppressPolylines
+    ).asInstanceOf[DirectionsRendererOptions]
   }
 }
 
@@ -2219,7 +2207,7 @@ trait StreetViewPov extends js.Object {
 
 @js.native
 trait StreetViewPanoramaData extends js.Object {
-  var copyright: String = js.native
+  var opyright: String = js.native
   var imageDate: String = js.native
   var links: js.Array[StreetViewLink] = js.native
   var location: StreetViewLocation = js.native
@@ -2361,7 +2349,7 @@ class Point protected() extends js.Object {
 @JSName("google.maps.Size")
 @js.native
 class Size protected() extends js.Object {
-  def this(width: Double, height: Double, widthUnit: js.UndefOr[String] = js.undefined, heightUnit: js.UndefOr[String] = js.undefined) = this()
+  def this(width: Double, height: Double, widthUnit: String = ???, heightUnit: String = ???) = this()
 
   var height: Double = js.native
   var width: Double = js.native
@@ -2724,6 +2712,7 @@ class PlacesService protected() extends js.Object {
 
   def textSearch(request: TextSearchRequest, callback: js.Function2[js.Array[PlaceResult], PlacesServiceStatus, Unit]): Unit = js.native
 }
+
 @js.native
 sealed trait PlacesServiceStatus extends js.Object {
 }
@@ -2751,6 +2740,7 @@ trait RadarSearchRequest extends js.Object {
   var radius: Double = js.native
   var types: js.Array[String] = js.native
 }
+
 @js.native
 sealed trait RankBy extends js.Object {
 }
@@ -2835,6 +2825,7 @@ trait OverlayCompleteEvent extends js.Object {
   var overlay: MVCObject = js.native
   var `type`: OverlayType = js.native
 }
+
 @js.native
 sealed trait OverlayType extends js.Object {
 }
@@ -2885,6 +2876,7 @@ trait WeatherLayerOptions extends js.Object {
   var temperatureUnits: TemperatureUnit = js.native
   var windSpeedUnits: WindSpeedUnit = js.native
 }
+
 @js.native
 sealed trait TemperatureUnit extends js.Object {
 }
@@ -2898,6 +2890,7 @@ object TemperatureUnit extends js.Object {
   @JSBracketAccess
   def apply(value: TemperatureUnit): String = js.native
 }
+
 @js.native
 sealed trait WindSpeedUnit extends js.Object {
 }
@@ -2912,6 +2905,7 @@ object WindSpeedUnit extends js.Object {
   @JSBracketAccess
   def apply(value: WindSpeedUnit): String = js.native
 }
+
 @js.native
 sealed trait LabelColor extends js.Object {
 }
@@ -3012,8 +3006,3 @@ class MapsEventListener extends js.Object {
 }
 
 }
-
-}
-
-}
-
